@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>single-Page Website</title>
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="container active">
+        <h2>Welcome in my page</h2>
+        <button onclick="showPage('loginPage')">Log In</button>
+        <button onclick="showPage('registrationPage')">Registration</button>
+        <button onclick="showPage('welcomePage')">Home</button>
+        <p class="p1">In this website I used javascript to create single page website</p>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registrationPage" class="container">
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="name" name="name" required class="input-login name" placeholder="Enter Your Name"><br><br>
+            <input type="email" id="email" name="email" required class="input-login" placeholder="Enter your Email"><br><br>
+            <input type="password" id="password" name="password" required class="input-login" placeholder="Enter your Password"><br><br>
+            <button type="button" onclick="submitRegistration()">Submit</button>
+        </form>
+    </div>
+
+    <!-- Registration Success Page -->
+    <div id="registrationSuccessPage" class="container">
+        <h2>Registration Successful</h2>
+        <div id="registrationData" class="paragraph"></div>
+        <button onclick="showPage('finallyPage')">Next</button>
+    </div>
+    <!-- login successful page  -->
+    <div id="loginSuccessPage" class="container">
+        <h2>Login complete Successfully</h2>
+        <div id="loginData" class="paragraph"></div>
+        <button onclick="showPage('welcomePage')">Finish</button>
+    </div>
+    <!-- finallypage  -->
+     <div id="finallyPage" class="container">
+        <h2>Finally Thanks for Regestration</h2>
+        <button onclick="showPage('welcomePage')">Finish</button>
+
+     </div>
+    <!-- Login Page -->
+    <div id="loginPage" class="container">
+        <h2>Log In</h2>
+        <form>
+            <input type="email" id="loginEmail" name="loginEmail" required placeholder="Enter your email" class="input-login name"><br><br>
+            <input type="password" id="loginPassword" name="loginPassword" required placeholder="Enter your password"  class="input-login"><br><br>
+            <!-- <button type="submit">Log In</button> -->
+            <button type="button" onclick="submitLogin()">Log In</button>
+            <button onclick="showPage('welcomePage')">Home</button>
+        </form>
+    </div>
+
+    <!-- <script>
+
+
+    </script> -->
+
+</body>
+</html>
